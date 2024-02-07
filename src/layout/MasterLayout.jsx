@@ -1,11 +1,16 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/shared/Sidebar";
+import Sidebar from "../components/sidebar/Sidebar";
+import '../styles/main.css';
 
 export default function MasterLayout() {
     return (
-        <div>
-            <Sidebar />
-            <Outlet />
+        <div className="flex">
+            <div className="layout-sidebar">
+                <Sidebar />
+            </div>
+            <div className="layout-main">
+                <Outlet />
+            </div>
         </div>
     )
 }
