@@ -11,10 +11,13 @@ export default {
         'passive': '#F2F2FC',
         'primary': '#343A40',
         'secondary': '#868E96',
+        'border': '#cfcfcf',
       },
       flex: {
         '2': '2',
         '3': '3',
+        '4': '4',
+        '5': '5',
       }
     },
   },
