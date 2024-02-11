@@ -4,7 +4,7 @@ import '../styles/main.css';
 
 export default function MasterLayout() {
     return (
-        <div className="flex">
+        <div className="flex h-full">
             <div className="layout-sidebar">
                 <Sidebar />
             </div>

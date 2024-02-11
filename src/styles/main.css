@@ -15,9 +15,14 @@
 html,
 body {
     font-family: 'Poppins', sans-serif;
-    @apply text-primary bg-passive h-full w-full;
+    @apply text-primary bg-passive;
 }
 
+html,
+body,
+#root {
+    height: 100%;
+}
 
 .layout-sidebar {
     @apply flex-1;
@@ -25,4 +30,32 @@ body {
 
 .layout-main {
     @apply flex-3;
+}
+
+.header {
+    position: relative;
+}
+
+.header::after {
+    left: -20px;
+    bottom: 0;
+    border-left: 7px solid;
+    border-bottom: 7px solid;
+}
+
+.header::before {
+    right: -20px;
+    top: 0;
+    border-right: 7px solid;
+    border-top: 7px solid;
+}
+
+
+.header::after,
+.header::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: #ff3200;
 }

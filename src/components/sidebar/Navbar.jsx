@@ -4,40 +4,40 @@ import { IoHome, IoPerson, IoList, IoBriefcase, IoReceipt } from "react-icons/io
 
 export default function Navbar() {
     return (
-        <div className="bg-white">
-            <header>
-                <h1>Makro Beyin</h1>
+        <div className="">
+            <header className="header mb-[70px]">
+                <h1 className="font-bold text-primary text-[40px]">Makro Beyin</h1>
             </header>
             <nav>
-                <ul>
-                    <li>
-                        <Link>
-                            <IoHome />
-                            <span>Anasayfa</span>
+                <ul className="flex flex-col gap-[30px]">
+                    <li className="border-b-[1px] pb-3">
+                        <Link className="flex items-center gap-[7px] text-primary px-12">
+                            <IoHome size={24} />
+                            <span className="text-[20px] font-medium">Anasayfa</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link>
-                            <IoPerson />
-                            <span>Hakkımızda</span>
+                    <li className="border-b-[1px] pb-3">
+                        <Link className="flex items-center gap-[7px] text-primary px-12">
+                            <IoPerson size={24} />
+                            <span className="text-[20px] font-medium">Hakkımızda</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link>
-                            <IoList />
-                            <span>Hizmetlerim</span>
+                    <li className="border-b-[1px] pb-3">
+                        <Link className="flex items-center gap-[7px] text-primary px-12">
+                            <IoList size={24} />
+                            <span className="text-[20px] font-medium">Hizmetlerim</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link>
-                            <IoBriefcase />
-                            <span>Portfolyom</span>
+                    <li className="border-b-[1px] pb-3">
+                        <Link className="flex items-center gap-[7px] text-primary px-12">
+                            <IoBriefcase size={24} />
+                            <span className="text-[20px] font-medium">Portfolyom</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link>
-                            <IoReceipt />
-                            <span>İletişim</span>
+                    <li className="border-b-[1px] pb-3">
+                        <Link className="flex items-center gap-[7px] text-primary px-12">
+                            <IoReceipt size={24} />
+                            <span className="text-[20px] font-medium">İletişim</span>
                         </Link>
                     </li>
                 </ul>
