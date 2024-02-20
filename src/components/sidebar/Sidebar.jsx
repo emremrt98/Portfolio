@@ -7,7 +7,7 @@ export default function Sidebar() {
             <div className="flex-1 flex flex-col items-center justify-center">
                 <Navbar />
             </div>
-            <div className=" h-[200px] border-border border-[1px]">
+            <div className=" h-[200px] border-border border-t-[1px]">
                 <Footer />
             </div>
         </div>

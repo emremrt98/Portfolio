@@ -5,8 +5,15 @@ import { IoChevronDownOutline } from "react-icons/io5";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 export default function Footer() {
     const [darkMode, setDarkMode] = useState(false);
-    const changeMode = () => {
-        setDarkMode(!darkMode)
+    const [openLang, setOpenLang] = useState(false);
+    const changeMode = (e) => {
+        setDarkMode(!darkMode);
+        const dataColor = e.currentTarget.children[0].dataset?.mode;
+        const body = document.querySelector('body');
+        body.className = dataColor;
+    }
+    const changeLangPopup = () => {
+        setOpenLang(!openLang);
     }
 
     return (
@@ -41,17 +48,26 @@ export default function Footer() {
             </ul>
 
             <div className="flex justify-between mx-[30px] mt-[30px]">
-                <div className="flex items-center gap-[7px] text-primary">
-                    <span>Türkçe</span>
-                    <IoChevronDownOutline />
+                <div className="relative flex-1">
+                    {
+                        openLang &&
+                        <ul className="absolute bottom-10 z-10 shadow-lg rounded-[3px] p-[16px]   left-0 w-full bg-white">
+                            <li className="hover:bg-[#f1f3f5] bg-[#f8f9fa] cursor-pointer">Türkçe</li>
+                            <li className="hover:bg-[#f1f3f5] cursor-pointer">İngilizce</li>
+                        </ul>
+                    }
+                    <div onClick={changeLangPopup} className="flex items-center gap-[7px] text-primary cursor-pointer">
+                        <span>Türkçe</span>
+                        <IoChevronDownOutline />
+                    </div>
                 </div>
-                <div onClick={changeMode} className="text-primary">
+                <div onClick={changeMode} className="text-primary flex-1 flex justify-end">
                     {
                         darkMode
                             ?
-                            <MdOutlineLightMode size={36} />
+                            <MdOutlineLightMode data-mode='light' size={36} />
                             :
-                            <MdDarkMode size={36} />
+                            <MdDarkMode data-mode='dark' size={36} />
                     }
                 </div>
             </div>

@@ -26,7 +26,7 @@ body,
 }
 
 .layout-sidebar {
-    @apply flex-1;
+    @apply w-[480px];
 }
 
 .layout-main {
